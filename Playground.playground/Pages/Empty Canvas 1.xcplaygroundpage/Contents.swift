@@ -40,7 +40,7 @@ PlaygroundPage.current.liveView = canvas
 
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+//canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 /*:
  ## Add your code
@@ -122,12 +122,12 @@ func movingUp () {
 
 //Start looping
 
-    for _ in 1...6 {
-        getToNextArrow()
-    }
-    movingUp()
-   for _ in 1...6 {
-    getToNextArrow()
+   for _ in 1...8
+{
+       for _ in 1...6 {
+           getToNextArrow()
+       }
+       movingUp()
    }
     
   
