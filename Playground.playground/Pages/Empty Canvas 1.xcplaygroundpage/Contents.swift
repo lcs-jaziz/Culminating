@@ -40,7 +40,7 @@ PlaygroundPage.current.liveView = canvas
 
 
 // Show a grid
-//canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 /*:
  ## Add your code

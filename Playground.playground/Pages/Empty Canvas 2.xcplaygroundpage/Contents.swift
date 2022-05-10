@@ -41,8 +41,6 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
@@ -58,20 +56,58 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+let scale = 40
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+//Position pen
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 1 * scale)
+turtle.right(by: 90)
+turtle.penDown()
 
-// Go back to origin
-p.goToOrigin()
-
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+//Triangle Design
+turtle.currentPosition()
+ turtle.currentHeading()
+turtle.forward(steps: 2 * scale)
+turtle.right(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 135)
+turtle.forward(steps: 2 * scale)
+turtle.left(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: 9 * scale)
+turtle.left(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: 2 * scale)
+turtle.right(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 135)
+turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 120)
+turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 135)
+turtle.forward(steps: 2 * scale)
+turtle.left(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 120)
+turtle.forward(steps: Int(2.7 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 120)
+turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 135)
+turtle.forward(steps: 2 * scale)
+turtle.left(by: 135)
+turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
+turtle.right(by: 135)
+turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+turtle.left(by: 120)
 
 /*:
  ## Show the Live View
