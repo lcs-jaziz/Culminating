@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 650
 let preferredHeight = 600
 /*:
  ## Required code
@@ -43,7 +43,7 @@ PlaygroundPage.current.liveView = canvas
 // Move the origin from the bottom-left corner of the canvas to it's centre point
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+//canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 /*:
  ## Add your code
