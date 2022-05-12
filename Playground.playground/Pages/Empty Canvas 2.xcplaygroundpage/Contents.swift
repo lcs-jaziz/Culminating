@@ -58,6 +58,8 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 let scale = 10
 
+canvas.highPerformance = true
+
 //Position pen
 turtle.penUp()
 turtle.left(by: 90)
@@ -65,71 +67,6 @@ turtle.forward(steps: 1 * scale)
 turtle.right(by: 90)
 turtle.penDown()
 
-//Triangle Design
-//turtle.currentPosition()
-// turtle.currentHeading()
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps:1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 9 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 5 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 5 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.right(by: 120)
-//turtle.forward(steps: 1 * scale)
-//turtle.left(by: 120)
-//turtle.forward(steps: 2 * scale)
-//turtle.left(by: 120)
 
 //Make triangle function
 func insertTriangles() {
@@ -200,8 +137,7 @@ func insertTriangles() {
 }
 
 
-
-//Function to move pen to position
+//Function to move pen to position and draw triangles
 func drawTriangles () {
    insertTriangles()
     turtle.penUp()
@@ -209,9 +145,8 @@ func drawTriangles () {
     turtle.penDown()
 }
 
-//Draw all Triangles
-
-func twoTriangleRows () {
+//Draw three complete rows
+func threeTriangleRows () {
     for _ in 1 ... 4
     {
         drawTriangles()
@@ -219,6 +154,17 @@ func twoTriangleRows () {
     turtle.left(by: 180)
     turtle.penUp()
     turtle.forward(steps: 63 * scale )
+    turtle.right(by: 90)
+    turtle.forward(steps: 45)
+    turtle.right(by: 90)
+    turtle.penDown()
+    for _ in 1 ... 4
+    {
+        drawTriangles()
+    }
+    turtle.left(by: 180)
+    turtle.penUp()
+    turtle.forward(steps: 58 * scale )
     turtle.right(by: 90)
     turtle.forward(steps: 45)
     turtle.right(by: 90)
@@ -238,39 +184,12 @@ func twoTriangleRows () {
 
 for _ in 1 ... 4
 {
-    drawTriangles()
-}
-turtle.left(by: 180)
-turtle.penUp()
-turtle.forward(steps: 63 * scale )
-turtle.right(by: 90)
-turtle.forward(steps: 45)
-turtle.right(by: 90)
-turtle.penDown()
-for _ in 1 ... 4
-{
-    drawTriangles()
-}
-turtle.left(by: 180)
-turtle.penUp()
-turtle.forward(steps: 58 * scale )
-turtle.right(by: 90)
-turtle.forward(steps: 45)
-turtle.right(by: 90)
-turtle.penDown()
-for _ in 1 ... 4
-{
-    drawTriangles()
+threeTriangleRows()
 }
 
 
 
-
-//turtle.forward(steps: Int(0.5 * sqrt(2.0) * Double(scale)))
-//turtle.right(by: 135)
-//turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
-//turtle.left(by: 120)
-//turtle.forward(steps: Int(1.0 * sqrt(2.0) * Double(scale)))
+canvas.highPerformance = false
 
 
 /*:
